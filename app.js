@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-// Requireds so that we canb parse the cookie
+// required so that we can parse the cookie
 const cookieParser = require("cookie-parser")
 app.use(cookieParser());
 
