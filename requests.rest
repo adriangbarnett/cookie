@@ -1,0 +1,14 @@
+### SET
+GET http://localhost:3000/set-cookie
+
+### SET WRONG
+GET http://localhost:3000/set-cookie-wrong
+
+### GET
+GET http://localhost:3000/get-cookie
+
+### TEST
+GET http://localhost:3000/test-cookie
+
+### CLEAR
+GET http://localhost:3000/clear-cookie
