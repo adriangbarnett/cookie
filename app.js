@@ -16,7 +16,6 @@ const isAuth = (req, res, next) => {
         return res.send("not authenticated, missing cookie2")
     if (req.cookies.cookie3 == null)
         return res.send("not authenticated , missing cookie3")
-
     if (req.cookies.cookie1 != "one")
         return res.send("cookie1 has wrong value")
     if (req.cookies.cookie2 != "two")
@@ -24,10 +23,10 @@ const isAuth = (req, res, next) => {
     if (req.cookies.cookie3 != "three")
         return res.send("cookie3 has wrong value")
 
-    // cookie exists
-    console.log("Cookie1: " + req.cookies.cookie1)
-    console.log("Cookie2: " + req.cookies.cookie2)
-    console.log("Cookie3: " + req.cookies.cookie3)
+   // cookie exists
+   console.log("Cookie1: " + req.cookies.cookie1)
+   console.log("Cookie2: " + req.cookies.cookie2)
+   console.log("Cookie3: " + req.cookies.cookie3)
   
     next();
 }
@@ -36,7 +35,7 @@ const isAuth = (req, res, next) => {
 // Set cookie (login)
 app.get('/set-cookie', async (req, res) => { 
 
-    // constions for the cookie
+    // options for this cookie
     const cookieOptions = {
         httpOnly: true,
         secure: false,
@@ -73,7 +72,7 @@ app.get('/get-cookie', (req, res) => {
 
     // Totaly stole this bit of code from:
     // https://stackoverflow.com/questions/3393854/get-and-set-a-single-cookie-with-node-js-http-server
-    // splity all existing cookies into a list
+    // split all existing cookies into a list
     const list = {}
     const cookieHeader = req.headers?.cookie;
 
