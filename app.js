@@ -19,10 +19,10 @@ const isAuth = (req, res, next) => {
 
     if (req.cookies.cookie1 != "one")
         return res.send("cookie1 has wrong value")
-    if (req.cookies.cookie1 != "two")
+    if (req.cookies.cookie2 != "two")
         return res.send("cookie2 has wrong value")
-    if (req.cookies.cookie1 != "three")
-        return res.send("cookie2 has wrong value")
+    if (req.cookies.cookie3 != "three")
+        return res.send("cookie3 has wrong value")
 
     // cookie exists
     console.log("Cookie1: " + req.cookies.cookie1)
